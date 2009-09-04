@@ -1,0 +1,34 @@
+h1. Simple SNMP Tools
+hbeaver@gmail.com      
+                                                                                                   
+h2. Purpose
+
+To allow quick testing of SNMP from either agent and/or receiver in Ruby. And also provide working example code. These scripts have only been tested on OSX.
+                                     
+h2. Requirements
+
+h3. Gems
+
+# snmp
+# eventmachine
+
+h2. Usage
+
+h3. Server/Receiver
+
+If you are using lower ports (1-1024), you will need to run as root or via sudo on *nix.
+
+<pre>sudo ruby simple_receiver.rb 127.0.0.1 1666</pre>
+
+h3. Agent/Trap
+                   
+<pre>ruby send_trap.rb localhost 1666 1.3.6.1.4.1.1030 ["hank","beaver"]</pre>
+
+h2. Credits
+
+These simple scripts were created by culling over some other posts and scripts on the web. Notably:
+
+# http://snmplib.rubyforge.org/
+# http://wiki.github.com/normelton/snmp4em
+# http://couponguy.railsplayground.net/wp/?tag=ruby
+
